@@ -64,11 +64,14 @@ task main()
 	  	motor[leftDrive] = 75;
 	  }
 
-	  if(joy1Btn(7) == 0){
-	  	motor[arm] = 0;
+	  if(joy1Btn(7) == 1){
+	  	motor[arm] = 50;
+	  }
+	  else if(joy1Btn(8) == 1){
+	  	motor[arm] = -50;
 	  }
 	  else{
-	  	motor[arm] = 50;
+	  	motor[arm] = 0;
 	  }
 
   }//end of while
