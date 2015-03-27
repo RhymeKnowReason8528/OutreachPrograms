@@ -26,18 +26,18 @@ task main()
 
   while (true)
   {
-	  if(abs(joystick.joy1_y1) < 15){
+	  if(abs(joystick.joy1_y2) < 15){
 	  	motor[rightDrive] = 0;
 	  }
 	  else{
-	  	motor[rightDrive] = joystick.joy1_y1;
+	  	motor[rightDrive] = joystick.joy1_y2*0.5;
 	  }
 
-	  if(abs(joystick.joy1_y2) < 15){
+	  if(abs(joystick.joy1_y1) < 15){
 	  	motor[leftDrive] = 0;
 	  }
 	  else{
-	  	motor[leftDrive] = joystick.joy1_y2;
+	  	motor[leftDrive] = joystick.joy1_y1*0.5;
 	  }
 
 	  if(joy1Btn(7) == 1 && nMotorEncoder[arm] > 0){
