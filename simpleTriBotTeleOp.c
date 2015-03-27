@@ -40,11 +40,11 @@ task main()
 	  	motor[leftDrive] = joystick.joy1_y1*0.5;
 	  }
 
-	  if(joy1Btn(7) == 1 && nMotorEncoder[arm] > 0){
-	  	motor[arm] = 30;
+	  if(joy1Btn(7) == 1){
+	  	motor[arm] = -20;
 	  }
-	  else if(joy1Btn(8) == 1 && nMotorEncoder[arm] < 50){
-	  	motor[arm] = -30;
+	  else if(joy1Btn(8) == 1){
+	  	motor[arm] = 20;
 	  }
 	  else{
 	  	motor[arm] = 0;
