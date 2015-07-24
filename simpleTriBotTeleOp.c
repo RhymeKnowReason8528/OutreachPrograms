@@ -30,21 +30,21 @@ task main()
 	  	motor[rightDrive] = 0;
 	  }
 	  else{
-	  	motor[rightDrive] = joystick.joy1_y2*0.5;
+	  	motor[rightDrive] = joystick.joy1_y2*0.4;
 	  }
 
 	  if(abs(joystick.joy1_y1) < 15){
 	  	motor[leftDrive] = 0;
 	  }
 	  else{
-	  	motor[leftDrive] = joystick.joy1_y1*0.5;
+	  	motor[leftDrive] = joystick.joy1_y1*0.4;
 	  }
 
 	  if(joy1Btn(7) == 1){
-	  	motor[arm] = -20;
+	  	motor[arm] = -15;
 	  }
 	  else if(joy1Btn(8) == 1){
-	  	motor[arm] = 20;
+	  	motor[arm] = 15;
 	  }
 	  else{
 	  	motor[arm] = 0;
