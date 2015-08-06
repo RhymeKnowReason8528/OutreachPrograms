@@ -63,11 +63,11 @@ task main()//start task main
 			servo(armServo) = ARM_DOWN;//put the arm servo at position 195 (down)
 		}
 
-		if(joy1Btn(5) == 1 && servo(armServo) < CLAW_HIGH_LIMIT) {//if the left top back button (button 5) is pressed and claw is not already fully open
-			servo(clawServo) -= 1;//open the claw
+		if(joy1Btn(5) == 1) {//if the left top back button (button 5) is pressed and claw is not already fully open
+			servo(clawServo) -= CLAW_HIGH_LIMIT;//open the claw
 		}
-		else if(joy1Btn(7) == 1 && servo(armServo) > CLAW_LOW_LIMIT) {//if the left bottom button (button 7) is pressed and claw is not already fully closed
-			servo(clawServo) += 1;//close the claw
+		else if(joy1Btn(7) == 1) {//if the left bottom button (button 7) is pressed and claw is not already fully closed
+			servo(clawServo) += CLAW_LOW_LIMIT;//close the claw
 		}
 
 		if(joy1Btn(3) == 1) {
