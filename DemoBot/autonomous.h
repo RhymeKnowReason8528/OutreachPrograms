@@ -8,7 +8,7 @@ void runAutonomous() {
 	blockColor = SensorValue[colorSensor];
 	if(blockColor == (long)BLUECOLOR) {
 		(bool)irSeeker.mode = (irSeeker.mode == DSP_1200);
-		while(sensorValue(irSeeker) != 4) {
+		while(SensorValue(irSeeker) != 4) {
 			motor[rightMotor] = 50;
 			motor[leftMotor] = -50;
 		}
