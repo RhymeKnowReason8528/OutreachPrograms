@@ -5,6 +5,9 @@ void runAutonomous() {
 	tHTIRS2 irSeeker;
 	initSensor(&irSeeker, S3);
 
+	servo[ArmServo] = ARM_UP;
+	servo[clawServo] = CLAW_CLOSED
+
 	blockColor = SensorValue[colorSensor];
 
 	while(SensorValue(touchSensor) == 0) {//while the touch sensor is not pressed
