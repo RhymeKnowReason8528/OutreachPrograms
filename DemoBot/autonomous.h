@@ -5,8 +5,8 @@ void runAutonomous() {
 	tHTIRS2 irSeeker;//create a struct
 	initSensor(&irSeeker, S3);//initialize the IR sensor
 
-	servo[armServo] = ARM_UP;//lift the arm up
 	servo[clawServo] = CLAW_CLOSED;//close the claw around the item
+	servo[armServo] = ARM_UP;//lift the arm up
 
 	blockColor = SensorValue[colorSensor];//assign the color of the item in claw to blockColor
 
