@@ -65,10 +65,10 @@ task main()//start task main
 		}
 
 		if(joy1Btn(5) == 1) {//if the left top back button (button 5) is pressed and claw is not already fully open
-			servo(clawServo) = CLAW_HIGH_LIMIT;//open the claw
+			servo(clawServo) = CLAW_OPEN;//open the claw
 		}
 		else if(joy1Btn(7) == 1) {//if the left bottom button (button 7) is pressed and claw is not already fully closed
-			servo(clawServo) = CLAW_LOW_LIMIT;//close the claw
+			servo(clawServo) = CLAW_CLOSED;//close the claw
 		}
 
 		if(joy1Btn(3) == 1) {
