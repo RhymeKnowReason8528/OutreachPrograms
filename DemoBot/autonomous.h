@@ -5,8 +5,8 @@ void runAutonomous() {
 	tHTIRS2 irSeeker;
 	initSensor(&irSeeker, S3);
 
-	servo[ArmServo] = ARM_UP;
-	servo[clawServo] = CLAW_CLOSED
+	servo[armServo] = ARM_UP;
+	servo[clawServo] = CLAW_CLOSED;
 
 	blockColor = SensorValue[colorSensor];
 
