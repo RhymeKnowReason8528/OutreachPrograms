@@ -2,13 +2,13 @@
 int blockColor;
 
 void runAutonomous() {
-	tHTIRS2 irSeeker;
-	initSensor(&irSeeker, S3);
+	tHTIRS2 irSeeker;//create a struct
+	initSensor(&irSeeker, S3);//initialize the IR sensor
 
-	servo[armServo] = ARM_UP;
-	servo[clawServo] = CLAW_CLOSED;
+	servo[armServo] = ARM_UP;//lift the arm up
+	servo[clawServo] = CLAW_CLOSED;//close the claw around the item
 
-	blockColor = SensorValue[colorSensor];
+	blockColor = SensorValue[colorSensor];//assign the color of the item in claw to blockColor
 
 	while(SensorValue(touchSensor) == 0) {//while the touch sensor is not pressed
 		if(blockColor == (long)BLUECOLOR) {//if the item in claw is blue
