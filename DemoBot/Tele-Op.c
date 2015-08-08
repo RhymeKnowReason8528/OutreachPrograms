@@ -25,7 +25,7 @@ void initializeRobot()//this funcion will set the servos at a starting point at 
 	servo[clawServo] = CLAW_SERVO_INIT;//set the claw to the open position at the beginning of the program
 	servo[armServo] = ARM_SERVO_INIT;//set the arm about in the middle
 	return;//return nothing, since this funtion is void
-}//close function
+};//close function
 
 task main()//start task main
 {

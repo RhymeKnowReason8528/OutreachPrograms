@@ -20,8 +20,10 @@ void runAutonomous() {
 			}
 			else if(irSeeker.acDirection < 5) {//if the IR beacon is in a zone that is more that 5
 				motor[leftMotor] = 50;//give leftMotor 50% power
+				motor[rightMotor] = 0;
 			}
 			else if(irSeeker.acDirection > 5) {//if the IR beacon is in a zone that is less than 5
+				motor[leftMotor] = 0;
 				motor[rightMotor] = 50;//give rightMotor 50% power
 			}//closing of else if
 		//}//closing of if
