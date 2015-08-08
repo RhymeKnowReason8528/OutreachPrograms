@@ -10,10 +10,10 @@ void runAutonomous() {
 
 	blockColor = SensorValue[colorSensor];//assign the color of the item in claw to blockColor
 
-	if(blockColor == (long)GREENCOLOR) {//if the item in claw is blue
+	if(blockColor == (long)GREENCOLOR || blockColor == (long)BLUECOLOR) {//if the item in claw is blue
 		(bool)irSeeker.mode = (irSeeker.mode == DSP_1200);//set the seeking mode to 1200 MHrtz
 	}
-	else if(blockColor == (long)WHITECOLOR) {//if the item is yellow
+	else if(blockColor == (long)WHITECOLOR || blockColor == (long)REDCOLOR) {//if the item is yellow
 		(bool)irSeeker.mode = (irSeeker.mode == DSP_600);//set the seeking mode to 600 MHrtz
 	}//closing of else if
 	else {
