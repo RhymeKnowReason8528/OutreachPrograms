@@ -26,21 +26,22 @@ void runAutonomous() {
 				motor[leftMotor] = 0;
 				motor[rightMotor] = 50;//give rightMotor 50% power
 			}//closing of else if
-		//}//closing of if
-		else if(blockColor == (long)YELLOWCOLOR) {//if the item is yellow
-			(bool)irSeeker.mode = (irSeeker.mode == DSP_600);//set the seeking mode to 600 MHrtz
-			if(HTIRS2_AC_DIR == 5) {//if the IR beacon is in zone 5
-				//make the robot move forward
-				motor[rightMotor] = 50;
-				motor[leftMotor] = 50;
-			}
-			else if(HTIRS2_AC_DIR > 5) {//if the IR beacon is in a zone that is more than 5
-				motor[leftMotor] = 50;//give leftMotor 50% power
-			}
-			else if(HTIRS2_AC_DIR < 5) {//if the IR beacon is in a zone that is less than 5
-				motor[rightMotor] = 50;//give rightMotot 50% power
+			//}//closing of if
+			else if(blockColor == (long)YELLOWCOLOR) {//if the item is yellow
+				(bool)irSeeker.mode = (irSeeker.mode == DSP_600);//set the seeking mode to 600 MHrtz
+				if(HTIRS2_AC_DIR == 5) {//if the IR beacon is in zone 5
+					//make the robot move forward
+					motor[rightMotor] = 50;
+					motor[leftMotor] = 50;
+				}
+				else if(HTIRS2_AC_DIR > 5) {//if the IR beacon is in a zone that is more than 5
+					motor[leftMotor] = 50;//give leftMotor 50% power
+				}
+				else if(HTIRS2_AC_DIR < 5) {//if the IR beacon is in a zone that is less than 5
+					motor[rightMotor] = 50;//give rightMotot 50% power
+				}//closing of else if
 			}//closing of else if
-		}//closing of else if
-		readSensor(&irSeeker);
-	}//closing of while
-}//closing of function 'runAutonomous'
+			readSensor(&irSeeker);
+		}//closing of while
+	}//closing of function 'runAutonomous'
+}
